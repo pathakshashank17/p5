@@ -6,9 +6,9 @@ const size = 80;
 // Create canvas
 function setup() {
     createCanvas(1000, 600);
-    slider = createSlider(1, 100, 3, 2);
+    slider = createSlider(1, 1000, 3, 2);
     slider.position(380, 50);
-    slider.style('width', '400px');
+    slider.style('width', '900px');
     div = createDiv(`Number of terms [${slider.value()}]:`);
     div.position(200, 50);
     div.style('color', 'white');
