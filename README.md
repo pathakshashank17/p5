@@ -8,4 +8,10 @@
     <img src='./Epicycles/demo.gif' alt='demo'>
 </div>
 
+<h2 align='center'>Monte-Carlo method for finding π</h2>
+<p align='center'> The idea behind this is draw a bunch of random points on the canvas and count the number of points falling inside the circle. The ratio of the number points inside the circle with the total number of points is equal to the ratio of the area of circle with the area of the canvas i.e π / 4</p>
+<div align='center'>
+    <img src='./Monte-Carlo/demo.gif' alt='demo'>
+</div>
+
 <p align='center'>Demo available at <a href='https://pathakshashank17.github.io/p5'>gh-pages</a>
