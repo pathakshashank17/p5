@@ -11,7 +11,7 @@ const width = 500;
 const height = width;
 let slider;
 let pi = 0;
-let points = 1000;
+let points = 5000;
 let itrs = 1;
 let inCircle = 0;
 let X = [];
@@ -19,12 +19,12 @@ let Y = [];
 
 function setup() {
   createCanvas(width, height);
-  slider = createSlider(100, 10000, points, 100);
-	slider.position(750, 50);
-	slider.style('width', '400px');
-	div = createDiv(`Number of points [${slider.value()}]:`);
-	div.position(550, 50);
-	div.style('color', 'white');
+  slider = createSlider(100, 25000, points, 100);
+  slider.position(750, 50);
+  slider.style('width', '400px');
+  div = createDiv(`Number of points [${slider.value()}]:`);
+  div.position(550, 50);
+  div.style('color', 'white');
   init();
 }
 
@@ -53,17 +53,19 @@ function draw() {
   circle(width / 2, height / 2, width);
 
   // Main ingredient
-  if (itrs <= points) {
-    let randX = random(width),
-      randY = random(height);
-    X.push(randX);
-    Y.push(randY);
+  for (let i = 0; i <= 1000; i++) {
+    if (itrs <= points) {
+      let randX = random(width),
+        randY = random(height);
+      X.push(randX);
+      Y.push(randY);
 
-    // If the random point lies within circle, inCircle++
-    if (Math.pow(randX - width / 2, 2) + Math.pow(randY - height / 2, 2) <= width * width / 4) {
-      inCircle++;
+      // If the random point lies within circle, inCircle++
+      if (Math.pow(randX - width / 2, 2) + Math.pow(randY - height / 2, 2) <= width * width / 4) {
+        inCircle++;
+      }
+      itrs++;
     }
-    itrs++;
   }
 
   // Draw all the previous points
@@ -79,6 +81,6 @@ function draw() {
   // Refresh the value of π & display it
   pi = 4 * (inCircle / points);
   textSize(26);
-  fill("red");
+  fill("white");
   text(`π = ${pi}`, 10, 30);
 }
