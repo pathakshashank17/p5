@@ -53,7 +53,7 @@ function draw() {
   circle(width / 2, height / 2, width);
 
   // Main ingredient
-  for (let i = 0; i <= 1000; i++) {
+  for (let i = 0; i <= 500; i++) {
     if (itrs <= points) {
       let randX = random(width),
         randY = random(height);
