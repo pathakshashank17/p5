@@ -14,4 +14,10 @@
     <img src='./Monte-Carlo/demo.gif' alt='demo'>
 </div>
 
+<h2 align='center'>Colliding Blocks method for finding π</h2>
+<p align='center'>In this method, two blocks, each with a mass ratio of 100^x, where x is an integer interact with each and a wall using elastic collision. The interesting fact is that the number of collisions gives us the digits in pi.</p>
+<div align='center'>
+    <img src='./Colliding-Blocks/demo.gif' alt='demo'>
+</div>
+
 <p align='center'>Demo available at <a href='https://pathakshashank17.github.io/p5'>gh-pages</a>
